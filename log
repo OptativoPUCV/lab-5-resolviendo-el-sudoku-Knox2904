@@ -50,3 +50,17 @@ Thu, May 15, 2025  6:52:40 PM:
  1 file changed, 2 deletions(-)
  tests:  0|0
 28a15e5
+Thu, May 15, 2025  7:01:30 PM: 
+ sudoku.c | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:142:22: error: implicit declaration of function 'back' [-Werror=implicit-function-declaration]
+     while((NodoAdj = back(listAdjTemp)) != NULL){
+                      ^~~~
+sudoku.c:142:20: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+     while((NodoAdj = back(listAdjTemp)) != NULL){
+                    ^
+cc1.exe: all warnings being treated as errors
+ff06131

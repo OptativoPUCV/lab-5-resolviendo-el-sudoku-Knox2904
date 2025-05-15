@@ -127,23 +127,24 @@ Node* DFS(Node* initial, int* cont){
   Stack * pila = createStack() ; 
   push(pila , initial) ; 
 
-  Node *aux = createNode() ; 
+
   while(top(pila) != NULL){
-    aux = top(pila) ; 
+    Node *aux = top(pila) ; 
     pop(pila) ;
+
+    (*cont)++;
     
     if(is_final(aux)) return aux ; 
 
-    List * listAdjTemp = createList() ; 
-    listAdjTemp = get_adj_nodes(aux) ; 
+    List * listAdjTemp = get_adj_nodes(aux) ;
+    Node * NodoAdj ; 
 
-    Node * NodoAdj = createNode() ; 
-    while(listAdjTemp != NULL){
-      NodoAdj = last(listAdjTemp) ; 
+    while((NodoAdj = back(listAdjTemp)) != NULL){
       push(pila , NodoAdj) ; 
       popBack(listAdjTemp) ; 
     }
-    
+
+    free(listAdjTemp) ; 
   }
 
   return NULL;
