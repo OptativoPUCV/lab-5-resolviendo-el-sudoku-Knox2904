@@ -100,7 +100,8 @@ List* get_adj_nodes(Node* n){
 
         for(int l = 1 ; l < 10 ; l++){
           Node* nodeAux = copy(n) ; 
-          nodeAux->sudo[i][k] = l ; 
+          nodeAux->sudo[i][k] = l ;
+          is_valid(nodeAux) ; 
           pushBack(list , nodeAux) ; 
         }
         
