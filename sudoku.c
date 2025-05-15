@@ -139,7 +139,7 @@ Node* DFS(Node* initial, int* cont){
     List * listAdjTemp = get_adj_nodes(aux) ;
     Node * NodoAdj ; 
 
-    while((NodoAdj = back(listAdjTemp)) != NULL){
+    while((NodoAdj = last(listAdjTemp)) != NULL){
       push(pila , NodoAdj) ; 
       popBack(listAdjTemp) ; 
     }
