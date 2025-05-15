@@ -44,6 +44,26 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+  //por fila 
+  for(int i = 0 ; i < 9 ; i++){
+    int esta[10] = {0} ; 
+
+    for(int k = 0 ; k < 9 ; k++){
+      int num = n->sudo[i][k] ; 
+      
+      if(num == 0 ) continue;
+      if(esta[num]) return 0 ; //el numero ya estaba en la matriz 
+      esta[num] = 1 ; //es como si vieramos cada numero 1 ,...,9 para ver si esta en la posicion
+      //como jugar el battleship mas o menos pero con una posicion en vez de barcos y todos son 1x1 
+      // y no los undes si no que los marcas con 1 , para que si aparece otro en la fila  la funcion  , if(esta[num]) return 0  , va a funcionar 
+      //porque esta del numero va a ser 1 , poque ya lo vimos antes 
+    }
+  }
+
+  
+
+
+
 
     return 1;
 }
