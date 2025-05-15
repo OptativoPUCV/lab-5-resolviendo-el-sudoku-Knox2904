@@ -45,3 +45,8 @@ sudoku.c:129:9: error: variable 'elemento' set but not used [-Werror=unused-but-
          ^~~~~~~~
 cc1.exe: all warnings being treated as errors
 8e400a4
+Thu, May 15, 2025  6:52:40 PM: 
+ sudoku.c | 2 --
+ 1 file changed, 2 deletions(-)
+ tests:  0|0
+28a15e5

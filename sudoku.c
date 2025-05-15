@@ -126,8 +126,6 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
   Stack * pila = createStack() ; 
   push(pila , initial) ; 
-  Node *elemento = createNode() ; 
-  elemento = top(pila) ; 
 
   Node *aux = createNode() ; 
   while(top(pila) != NULL){
